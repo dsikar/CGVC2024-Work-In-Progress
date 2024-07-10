@@ -1,0 +1,694 @@
+%%%%%%%%%%%%%%%%
+% INTRODUCTION %
+%%%%%%%%%%%%%%%%
+
+@article{amodei2016concrete,
+  title={Concrete problems in AI safety},
+  author={Amodei, Dario and Olah, Chris and Steinhardt, Jacob and Christiano, Paul and Schulman, John and Man{\'e}, Dan},
+  journal={arXiv preprint arXiv:1606.06565},
+  year={2016}
+}
+
+@inproceedings{hendrycks2021many,
+  title={The many faces of robustness: A critical analysis of out-of-distribution generalization},
+  author={Hendrycks, Dan and Basart, Steven and Mu, Norman and Kadavath, Saurav and Wang, Frank and Dorundo, Evan and Desai, Rahul and Zhu, Tyler and Parajuli, Samyak and Guo, Mike and others},
+  booktitle={Proceedings of the IEEE/CVF international conference on computer vision},
+  pages={8340--8349},
+  year={2021}
+}
+
+@article{quinonero2009dataset,
+  title={Dataset shift in machine learning},
+  author={Qui{\~n}onero-Candela, Joaquin and Sugiyama, Masashi and Schwaighofer, Anton and Lawrence, Neil D},
+  journal={The MIT Press},
+  year={2009}
+}
+
+
+%%%%%%%%%%%
+% CONTEXT %
+%%%%%%%%%%%
+@misc{arpit2017closer,
+      title={A Closer Look at Memorization in Deep Networks}, 
+      author={Devansh Arpit and Stanisław Jastrzębski and Nicolas Ballas and David Krueger and Emmanuel Bengio and Maxinder S. Kanwal and Tegan Maharaj and Asja Fischer and Aaron Courville and Yoshua Bengio and Simon Lacoste-Julien},
+      year={2017},
+      eprint={1706.05394},
+      archivePrefix={arXiv},
+      primaryClass={stat.ML}
+}
+
+@phdthesis{klaus2022anomaly,
+  title={Anomaly Detection in the Latent Space of VAEs},
+  author={Klaus, Simon},
+  year={2022},
+  school={Karlsruher Institut f{\"u}r Technologie (KIT)}
+}
+
+@misc{hendrycks2018baseline,
+      title={A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks}, 
+      author={Dan Hendrycks and Kevin Gimpel},
+      year={2018},
+      eprint={1610.02136},
+      archivePrefix={arXiv},
+      primaryClass={cs.NE}
+}
+
+@article{hendrycks2019benchmarking,
+  title={Benchmarking neural network robustness to common corruptions and perturbations},
+  author={Hendrycks, Dan and Dietterich, Thomas},
+  journal={arXiv preprint arXiv:1903.12261},
+  year={2019}
+}
+
+@article{moreno2012unifying,
+  title={A unifying view on dataset shift in classification},
+  author={Moreno-Torres, Jose G and Raeder, Troy and Alaiz-Rodr{\'\i}guez, Roc{\'\i}o and Chawla, Nitesh V and Herrera, Francisco},
+  journal={Pattern Recognition},
+  volume={45},
+  number={1},
+  pages={521--530},
+  year={2012},
+  publisher={Elsevier}
+}
+
+@article{shimodaira2000improving,
+  title={Improving predictive inference under covariate shift by weighting the log-likelihood function},
+  author={Shimodaira, Hidetoshi},
+  journal={Journal of Statistical Planning and Inference},
+  volume={90},
+  number={2},
+  pages={227--244},
+  year={2000},
+  publisher={Elsevier}
+}
+
+@article{gama2014survey,
+  title={A survey on concept drift adaptation},
+  author={Gama, Jo{\~a}o and {\v{Z}}liobait{\.e}, Indr{\.e} and Bifet, Albert and Pechenizkiy, Mykola and Bouchachia, Abdelhamid},
+  journal={ACM Computing Surveys (CSUR)},
+  volume={46},
+  number={4},
+  pages={1--37},
+  year={2014},
+  publisher={ACM New York, NY, USA}
+}
+
+@article{patel2015visual,
+  title={Visual domain adaptation: A survey of recent advances},
+  author={Patel, Vishal M and Gopalan, Raghuraman and Li, Ruonan and Chellappa, Rama},
+  journal={IEEE Signal Processing Magazine},
+  volume={32},
+  number={3},
+  pages={53--69},
+  year={2015},
+  publisher={IEEE}
+}
+
+@article{kullback1951information,
+  title={On information and sufficiency},
+  author={Kullback, Solomon and Leibler, Richard A},
+  journal={The Annals of Mathematical Statistics},
+  volume={22},
+  number={1},
+  pages={79--86},
+  year={1951},
+  publisher={JSTOR}
+}
+
+@article{gretton2012kernel,
+  title={A kernel two-sample test},
+  author={Gretton, Arthur and Borgwardt, Karsten M and Rasch, Malte J and Sch{\"o}lkopf, Bernhard and Smola, Alexander},
+  journal={The Journal of Machine Learning Research},
+  volume={13},
+  number={1},
+  pages={723--773},
+  year={2012},
+  publisher={JMLR. org}
+}
+
+@article{wang2018deep,
+  title={Deep visual domain adaptation: A survey},
+  author={Wang, Mei and Deng, Weihong},
+  journal={Neurocomputing},
+  volume={312},
+  pages={135--153},
+  year={2018},
+  publisher={Elsevier}
+}
+
+@article{sugiyama2007covariate,
+  title={Covariate shift adaptation by importance weighted cross validation},
+  author={Sugiyama, Masashi and Krauledat, Matthias and M{\"u}ller, Klaus-Robert},
+  journal={The Journal of Machine Learning Research},
+  volume={8},
+  pages={985--1005},
+  year={2007},
+  publisher={JMLR. org}
+}
+
+@article{pan2009survey,
+  title={A survey on transfer learning},
+  author={Pan, Sinno Jialin and Yang, Qiang},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  volume={22},
+  number={10},
+  pages={1345--1359},
+  year={2009},
+  publisher={IEEE}
+}
+
+@article{ganin2016domain,
+  title={Domain-adversarial training of neural networks},
+  author={Ganin, Yaroslav and Ustinova, Evgeniya and Ajakan, Hana and Germain, Pascal and Larochelle, Hugo and Laviolette, Fran{\c{c}}ois and Marchand, Mario and Lempitsky, Victor},
+  journal={The Journal of Machine Learning Research},
+  volume={17},
+  number={1},
+  pages={2096--2030},
+  year={2016},
+  publisher={JMLR. org}
+}
+
+@article{lu2018learning,
+  title={Learning under concept drift: A review},
+  author={Lu, Jie and Liu, Anjin and Dong, Fan and Gu, Feng and Gama, Joao and Zhang, Guangquan},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  volume={31},
+  number={12},
+  pages={2346--2363},
+  year={2018},
+  publisher={IEEE}
+}
+
+@inproceedings{baena2006early,
+  title={Early drift detection method},
+  author={Baena-Garc{\'\i}a, Manuel and del Campo-{\'A}vila, Jos{\'e} and Fidalgo, Ra{\'u}l and Bifet, Albert and Gavald{\`a}, Ricard and Morales-Bueno, Rafael},
+  booktitle={Fourth International Workshop on Knowledge Discovery from Data Streams},
+  volume={6},
+  pages={77--86},
+  year={2006}
+}
+
+@article{gal2016dropout,
+  title={Dropout as a Bayesian approximation: Representing model uncertainty in deep learning},
+  author={Gal, Yarin and Ghahramani, Zoubin},
+  journal={International Conference on Machine Learning},
+  pages={1050--1059},
+  year={2016},
+  organization={PMLR}
+}
+
+@article{kendall2017uncertainties,
+  title={What uncertainties do we need in Bayesian deep learning for computer vision?},
+  author={Kendall, Alex and Gal, Yarin},
+  journal={Advances in Neural Information Processing Systems},
+  volume={30},
+  year={2017}
+}
+
+@inproceedings{lakshminarayanan2017simple,
+  title={Simple and scalable predictive uncertainty estimation using deep ensembles},
+  author={Lakshminarayanan, Balaji and Pritzel, Alexander and Blundell, Charles},
+  booktitle={Advances in Neural Information Processing Systems},
+  pages={6402--6413},
+  year={2017}
+}
+
+@article{michelmore2018evaluating,
+  title={Evaluating uncertainty quantification in end-to-end autonomous driving control},
+  author={Michelmore, Rhiannon and Kwiatkowska, Marta and Gal, Yarin},
+  journal={arXiv preprint arXiv:1811.06817},
+  year={2018}
+}
+
+@inproceedings{hendrycks17baseline,
+  title={A baseline for detecting misclassified and out-of-distribution examples in neural networks},
+  author={Hendrycks, Dan and Gimpel, Kevin},
+  booktitle={International Conference on Learning Representations},
+  year={2017}
+}
+
+@inproceedings{liang2018enhancing,
+  title={Enhancing the reliability of out-of-distribution image detection in neural networks},
+  author={Liang, Shiyu and Li, Yixuan and Srikant, R},
+  booktitle={International Conference on Learning Representations},
+  year={2018}
+}
+
+@inproceedings{goodfellow2014explaining,
+  title={Explaining and harnessing adversarial examples},
+  author={Goodfellow, Ian J and Shlens, Jonathon and Szegedy, Christian},
+  booktitle={International Conference on Learning Representations},
+  year={2014}
+}
+
+@inproceedings{szegedy2013intriguing,
+  title={Intriguing properties of neural networks},
+  author={Szegedy, Christian and Zaremba, Wojciech and Sutskever, Ilya and Bruna, Joan and Erhan, Dumitru and Goodfellow, Ian and Fergus, Rob},
+  booktitle={International Conference on Learning Representations},
+  year={2013}
+}
+
+@inproceedings{madry2017towards,
+  title={Towards deep learning models resistant to adversarial attacks},
+  author={Madry, Aleksander and Makelov, Aleksandar and Schmidt, Ludwig and Tsipras, Dimitris and Vladu, Adrian},
+  booktitle={International Conference on Learning Representations},
+  year={2017}
+}
+
+@inproceedings{guo2018countering,
+  title={Countering adversarial images using input transformations},
+  author={Guo, Chuan and Rana, Mayank and Cisse, Moustapha and Van Der Maaten, Laurens},
+  booktitle={International Conference on Learning Representations},
+  year={2018}
+}
+
+@inproceedings{ribeiro2016should,
+  title={"Why should I trust you?" Explaining the predictions of any classifier},
+  author={Ribeiro, Marco Tulio and Singh, Sameer and Guestrin, Carlos},
+  booktitle={Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+  pages={1135--1144},
+  year={2016}
+}
+
+@article{doshi2017towards,
+  title={Towards a rigorous science of interpretable machine learning},
+  author={Doshi-Velez, Finale and Kim, Been},
+  journal={arXiv preprint arXiv:1702.08608},
+  year={2017}
+}
+
+@article{leibig2017leveraging,
+  title={Leveraging uncertainty information from deep neural networks for disease detection},
+  author={Leibig, Christian and Allken, Vaneeda and Ayhan, Murat Seçkin and Berens, Philipp and Wahl, Siegfried},
+  journal={Scientific Reports},
+  volume={7},
+  number={1},
+  pages={1--14},
+  year={2017},
+  publisher={Nature Publishing Group}
+}
+
+@article{feng2018deep,
+  title={Deep learning-based quantitative trading strategies for stock markets},
+  author={Feng, Guanhao and He, Jingyu and Polson, Nicholas G},
+  journal={arXiv preprint arXiv:1805.01039},
+  year={2018}
+}
+
+@inproceedings{guo2017calibration,
+  title={On calibration of modern neural networks},
+  author={Guo, Chuan and Pleiss, Geoff and Sun, Yu and Weinberger, Kilian Q},
+  booktitle={International Conference on Machine Learning},
+  pages={1321--1330},
+  year={2017},
+  organization={PMLR}
+}
+
+@inproceedings{zadrozny2002transforming,
+  title={Transforming classifier scores into accurate multiclass probability estimates},
+  author={Zadrozny, Bianca and Elkan, Charles},
+  booktitle={Proceedings of the eighth ACM SIGKDD International Conference on Knowledge Discovery and Data Mining},
+  pages={694--699},
+  year={2002}
+}
+
+@article{kuncheva2006measures,
+  title={Measures of diversity in classifier ensembles and their relationship with the ensemble accuracy},
+  author={Kuncheva, Ludmila I and Whitaker, Christopher J},
+  journal={Machine learning},
+  volume={51},
+  number={2},
+  pages={181--207},
+  year={2006},
+  publisher={Springer}
+}
+
+@inproceedings{mozannar2020consistent,
+  title={Consistent cost-sensitive learning with nonlinear loss functions},
+  author={Mozannar, Hussein and Sontag, David},
+  booktitle={International Conference on Machine Learning},
+  pages={7032--7042},
+  year={2020},
+  organization={PMLR}
+}
+
+%%%%%%%%%%%
+% METHODS %
+%%%%%%%%%%%
+
+@article{dosovitskiy2020image,
+  title={An image is worth 16x16 words: Transformers for image recognition at scale},
+  author={Dosovitskiy, Alexey and Beyer, Lucas and Kolesnikov, Alexander and Weissenborn, Dirk and Zhai, Xiaohua and Unterthiner, Thomas and Dehghani, Mostafa and Minderer, Matthias and Heigold, Georg and Gelly, Sylvain and others},
+  journal={arXiv preprint arXiv:2010.11929},
+  year={2020}
+}
+
+@misc{wolf2020huggingfaces,
+      title={HuggingFace's Transformers: State-of-the-art Natural Language Processing}, 
+      author={Thomas Wolf and Lysandre Debut and Victor Sanh and Julien Chaumond and Clement Delangue and Anthony Moi and Pierric Cistac and Tim Rault and Rémi Louf and Morgan Funtowicz and Joe Davison and Sam Shleifer and Patrick von Platen and Clara Ma and Yacine Jernite and Julien Plu and Canwen Xu and Teven Le Scao and Sylvain Gugger and Mariama Drame and Quentin Lhoest and Alexander M. Rush},
+      year={2020},
+      eprint={1910.03771},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+
+@misc{wu2020visual,
+      title={Visual Transformers: Token-based Image Representation and Processing for Computer Vision}, 
+      author={Bichen Wu and Chenfeng Xu and Xiaoliang Dai and Alvin Wan and Peizhao Zhang and Zhicheng Yan and Masayoshi Tomizuka and Joseph Gonzalez and Kurt Keutzer and Peter Vajda},
+      year={2020},
+      eprint={2006.03677},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+
+@inproceedings{deng2009imagenet,
+  title={Imagenet: A large-scale hierarchical image database},
+  author={Deng, Jia and Dong, Wei and Socher, Richard and Li, Li-Jia and Li, Kai and Fei-Fei, Li},
+  booktitle={2009 IEEE conference on computer vision and pattern recognition},
+  pages={248--255},
+  year={2009},
+  organization={Ieee}
+}
+@article{turing1950computing,
+    author = {Turing, Alan M.},
+    title = {Computing Machinery and Intelligence},
+    journal = {Mind},
+    volume = {LIX},
+    number = {236},
+    pages = {433--460},
+    year = {1950}
+}
+
+@article{rumelhart1986learning,
+  title = {Learning Representations by Back-Propagating Errors},
+  author = {Rumelhart, David E. and Hinton, Geoffrey E. and Williams, Ronald J.},
+  journal = {Nature},
+  volume = {323},
+  number = {6088},
+  pages = {533--536},
+  year = {1986}
+}
+
+@inproceedings{kautz1992planning,
+  title = {Planning as Satisfiability},
+  author = {Kautz, Henry A. and Selman, Bart},
+  booktitle = {Proceedings of the 10th European Conference on Artificial Intelligence (ECAI)},
+  pages = {359--363},
+  year = {1992}
+}
+
+@article{grosz1996collaborative,
+  title = {Collaborative Plans for Complex Group Action},
+  author = {Grosz, Barbara J. and Kraus, Sarit},
+  journal = {Artificial Intelligence},
+  volume = {86},
+  number = {2},
+  pages = {269--357},
+  year = {1996}
+}
+
+@misc{perelman2002entropy,
+  title = {The Entropy Formula for the {R}icci Flow and its Geometric Applications}, 
+  author = {Grisha Perelman},
+  howpublished = {Preprint arXiv:math/0211159},
+  year = {2002}
+}
+
+@book{pearl2009causality,
+  title = {Causality},
+  author = {Pearl, Judea},
+  publisher = {Cambridge University Press},
+  year = {2009}
+}
+
+%%%%%%%%%%%
+% RESULTS %
+%%%%%%%%%%%
+
+@article{LeCun1998,
+  title={Gradient-based learning applied to document recognition},
+  author={LeCun, Yann and Bottou, Léon and Bengio, Yoshua and Haffner, Patrick},
+  journal={Proceedings of the IEEE},
+  volume={86},
+  number={11},
+  pages={2278--2324},
+  year={1998},
+  publisher={IEEE}
+}
+
+@book{goodfellow2016deep,
+  title={Deep learning},
+  author={Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron},
+  year={2016},
+  publisher={MIT press}
+}
+
+@article{bishop2006pattern,
+  title={Pattern recognition and machine learning},
+  author={Bishop, Christopher M},
+  journal={Springer},
+  volume={2},
+  pages={645--678},
+  year={2006}
+}
+
+@article{jain2010data,
+  title={Data clustering: 50 years beyond K-means},
+  author={Jain, Anil K},
+  journal={Pattern recognition letters},
+  volume={31},
+  number={8},
+  pages={651--666},
+  year={2010},
+  publisher={Elsevier}
+}
+
+@article{xu2015comprehensive,
+  title={A comprehensive survey of clustering algorithms},
+  author={Xu, Dongkuan and Tian, Yingjie},
+  journal={Annals of Data Science},
+  volume={2},
+  number={2},
+  pages={165--193},
+  year={2015},
+  publisher={Springer}
+}
+
+@article{lloyd1982least,
+  title={Least squares quantization in PCM},
+  author={Lloyd, Stuart},
+  journal={IEEE transactions on information theory},
+  volume={28},
+  number={2},
+  pages={129--137},
+  year={1982},
+  publisher={IEEE}
+}
+
+@inproceedings{arthur2007k,
+  title={k-means++: The advantages of careful seeding},
+  author={Arthur, David and Vassilvitskii, Sergei},
+  booktitle={Proceedings of the eighteenth annual ACM-SIAM symposium on Discrete algorithms},
+  pages={1027--1035},
+  year={2007}
+}
+
+@article{johnson1967hierarchical,
+  title={Hierarchical clustering schemes},
+  author={Johnson, Stephen C},
+  journal={Psychometrika},
+  volume={32},
+  number={3},
+  pages={241--254},
+  year={1967},
+  publisher={Springer}
+}
+
+@article{mullner2011modern,
+  title={Modern hierarchical, agglomerative clustering algorithms},
+  author={M{\"u}llner, Daniel},
+  journal={arXiv preprint arXiv:1109.2378},
+  year={2011}
+}
+
+@inproceedings{ester1996density,
+  title={A density-based algorithm for discovering clusters in large spatial databases with noise},
+  author={Ester, Martin and Kriegel, Hans-Peter and Sander, J{\"o}rg and Xu, Xiaowei},
+  booktitle={Kdd},
+  volume={96},
+  pages={226--231},
+  year={1996}
+}
+
+@article{schubert2017dbscan,
+  title={DBSCAN revisited, revisited: why and how you should (still) use DBSCAN},
+  author={Schubert, Erich and Sander, J{\"o}rg and Ester, Martin and Kriegel, Hans Peter and Xu, Xiaowei},
+  journal={ACM Transactions on Database Systems (TODS)},
+  volume={42},
+  number={3},
+  pages={1--21},
+  year={2017},
+  publisher={ACM New York, NY, USA}
+}
+
+@article{shi2000normalized,
+  title={Normalized cuts and image segmentation},
+  author={Shi, Jianbo and Malik, Jitendra},
+  journal={IEEE Transactions on pattern analysis and machine intelligence},
+  volume={22},
+  number={8},
+  pages={888--905},
+  year={2000},
+  publisher={IEEE}
+}
+
+@article{chandola2009anomaly,
+  title={Anomaly detection: A survey},
+  author={Chandola, Varun and Banerjee, Arindam and Kumar, Vipin},
+  journal={ACM computing surveys (CSUR)},
+  volume={41},
+  number={3},
+  pages={1--58},
+  year={2009},
+  publisher={ACM New York, NY, USA}
+}
+
+@article{ngai2009application,
+  title={Application of data mining techniques in customer relationship management: A literature review and classification},
+  author={Ngai, Eric WT and Xiu, Li and Chau, Dorothy CK},
+  journal={Expert systems with applications},
+  volume={36},
+  number={2},
+  pages={2592--2602},
+  year={2009},
+  publisher={Elsevier}
+}
+
+@article{eisen1998cluster,
+  title={Cluster analysis and display of genome-wide expression patterns},
+  author={Eisen, Michael B and Spellman, Paul T and Brown, Patrick O and Botstein, David},
+  journal={Proceedings of the National Academy of Sciences},
+  volume={95},
+  number={25},
+  pages={14863--14868},
+  year={1998},
+  publisher={National Acad Sciences}
+}
+
+@article{jiang2004cluster,
+  title={Cluster analysis for gene expression data: A survey},
+  author={Jiang, Daxin and Tang, Chun and Zhang, Aidong},
+  journal={IEEE Transactions on knowledge and data engineering},
+  volume={16},
+  number={11},
+  pages={1370--1386},
+  year={2004},
+  publisher={IEEE}
+}
+
+@article{rodriguez2019clustering,
+  title={Clustering algorithms: A comparative approach},
+  author={Rodriguez, M Zoughi and Comin, Cesar H and Casanova, Dalcimar and Bruno, Odemir Martinez and Amancio, Diego R and Costa, Luciano da F and Rodrigues, Francisco A},
+  journal={PloS one},
+  volume={14},
+  number={1},
+  pages={e0210236},
+  year={2019},
+  publisher={Public Library of Science San Francisco, CA USA}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5555
+% Green softmax
+%%%%%%%%%%%%%%%%%%%
+
+Here are the references in BibTeX format:
+
+@article{gal2016uncertainty,
+  title={Uncertainty in deep learning},
+  author={Gal, Yarin},
+  journal={University of Cambridge},
+  volume={1},
+  number={3},
+  pages={4},
+  year={2016}
+}
+
+@article{strubell2019energy,
+  title={Energy and policy considerations for deep learning in NLP},
+  author={Strubell, Emma and Ganesh, Ananya and McCallum, Andrew},
+  journal={arXiv preprint arXiv:1906.02243},
+  year={2019}
+}
+
+@article{schwartz2020green,
+  title={Green AI},
+  author={Schwartz, Roy and Dodge, Jesse and Smith, Noah A and Etzioni, Oren},
+  journal={Communications of the ACM},
+  volume={63},
+  number={12},
+  pages={54--63},
+  year={2020},
+  publisher={ACM New York, NY, USA}
+}
+
+@article{lacoste2019quantifying,
+  title={Quantifying the carbon emissions of machine learning},
+  author={Lacoste, Alexandre and Luccioni, Alexandra and Schmidt, Victor and Dandres, Thomas},
+  journal={arXiv preprint arXiv:1910.09700},
+  year={2019}
+}
+
+@article{thompson2020computational,
+  title={The computational limits of deep learning},
+  author={Thompson, Neil C and Greenewald, Kristjan and Lee, Keeheon and Manso, Gabriel F},
+  journal={arXiv preprint arXiv:2007.05558},
+  year={2020}
+}
+
+@article{gal2016dropout_2,
+  title={Dropout as a bayesian approximation: Representing model uncertainty in deep learning},
+  author={Gal, Yarin and Ghahramani, Zoubin},
+  journal={International Conference on Machine Learning},
+  pages={1050--1059},
+  year={2016},
+  organization={PMLR}
+}
+
+@article{lakshminarayanan2017simple_2,
+  title={Simple and scalable predictive uncertainty estimation using deep ensembles},
+  author={Lakshminarayanan, Balaji and Pritzel, Alexander and Blundell, Charles},
+  journal={Advances in Neural Information Processing Systems},
+  volume={30},
+  year={2017}
+}
+
+@article{kendall2017uncertainties_2,
+  title={What uncertainties do we need in bayesian deep learning for computer vision?},
+  author={Kendall, Alex and Gal, Yarin},
+  journal={Advances in Neural Information Processing Systems},
+  volume={30},
+  year={2017}
+}
+
+@article{han2015deep,
+  title={Deep compression: Compressing deep neural networks with pruning, trained quantization and huffman coding},
+  author={Han, Song and Mao, Huizi and Dally, William J},
+  journal={arXiv preprint arXiv:1510.00149},
+  year={2015}
+}
+
+@article{gholami2021survey,
+  title={A survey of quantization methods for efficient neural network inference},
+  author={Gholami, Amir and Kim, Sehoon and Dong, Zhen and Yao, Zhewei and Mahoney, Michael W and Keutzer, Kurt},
+  journal={arXiv preprint arXiv:2103.13630},
+  year={2021}
+}
+
+@article{garcia2021estimation,
+  title={Estimation of energy consumption in machine learning},
+  author={Garcia-Martin, Eva and Rodrigues, Crefeda Faviola and Riley, Graham and Grahn, H{\aa}kan},
+  journal={Journal of Parallel and Distributed Computing},
+  volume={148},
+  pages={106--119},
+  year={2021},
+  publisher={Elsevier}
+}
