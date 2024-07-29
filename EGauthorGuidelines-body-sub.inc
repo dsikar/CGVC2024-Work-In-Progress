@@ -10,7 +10,25 @@
 % instead of the author's name (and leave the affiliation blank) !!
 % for final version: please provide your *own* ORCID in the brackets following \orcid; see https://orcid.org/ for more details.
 %\author[D. Fellner \& S. Behnke]
-\author[paper1049]{paper1049}
+%\author[paper1049]{paper1049}
+
+\author[D. Sikar \& A. Garcez \& R. Bloomfield \& T. Weyde \& K. Peeroo \& N. Singh \& M. Hutchinson \& D. Laksono \&  M. Reljan-Delaney]
+{\parbox{\textwidth}{\centering D. Sikar, A. Garcez, R. Bloomfield, T. Weyde, K. Peeroo, N. Singh, M. Hutchinson, D. Laksono  \&  M. Reljan-Delaney
+%        S. Spencer$^2$\thanks{Chairman Siggraph Publications Board}
+        }
+}        
+% {\parbox{\textwidth}{\centering D.\,W. Fellner\thanks{Chairman Eurographics Publications Board}$^{1,2}$\orcid{0000-0001-7756-0901}
+%         and S. Behnke$^{2}$\orcid{0000-0001-5923-423X} 
+% %        S. Spencer$^2$\thanks{Chairman Siggraph Publications Board}
+%         }
+% For Computer Graphics Forum: Please use the abbreviation of your first name.
+% {\parbox{\textwidth}{\centering $^1$TU Darmstadt \& Fraunhofer IGD, Germany\\
+%          $^2$Graz University of Technology, Institute of Computer Graphics and Knowledge Visualization, Austria
+% %        $^2$ Another Department to illustrate the use in papers from authors
+% %             with different affiliations
+%        }
+% }
+%}
 % {\parbox{\textwidth}{\centering D.\,W. Fellner\thanks{Chairman Eurographics Publications Board}$^{1,2}$\orcid{0000-0001-7756-0901}
 %         and S. Behnke$^{2}$\orcid{0000-0001-5923-423X} 
 % %        S. Spencer$^2$\thanks{Chairman Siggraph Publications Board}
