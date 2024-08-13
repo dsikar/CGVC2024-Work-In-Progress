@@ -3,7 +3,7 @@
 % D.Fellner, v2.04, Dec 14, 2023
 
 
-\title[EG \LaTeX\ Author Guidelines]%
+\title[]%
       {\LaTeX\ Author Guidelines for EUROGRAPHICS Proceedings Manuscripts}
 
 % for anonymous conference submission please enter your SUBMISSION ID

@@ -4,12 +4,9 @@
 
 \documentclass{egpubl}
 \usepackage{EGUKCGVC2024}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{lipsum}
-\usepackage{float}
+ 
 % --- for  Annual CONFERENCE
-% \ConferenceSubmission   % uncomment for Conference submission
+\ConferenceSubmission   % uncomment for Conference submission
 % \ConferencePaper        % uncomment for (final) Conference Paper
 % \STAR                   % uncomment for STAR contribution
 % \Tutorial               % uncomment for Tutorial contribution
@@ -28,7 +25,7 @@
 % \SpecialIssuePaper         % uncomment for final version of Computer Graphics Forum, special issue
 %                          % EuroVis, SGP, Rendering, PG
 % --- for  EG Workshop Proceedings
-%\WsSubmission      % uncomment for submission to EG Workshop
+% \WsSubmission      % uncomment for submission to EG Workshop
 \WsPaper           % uncomment for final version of EG Workshop contribution
 % \WsSubmissionJoint % for joint events, for example ICAT-EGVE
 % \WsPaperJoint      % for joint events, for example ICAT-EGVE
@@ -56,15 +53,16 @@
 \usepackage[T1]{fontenc}
 \usepackage{dfadobe}  
 
-\usepackage{cite}  % comment out for biblatex with backend=biber
+%\usepackage{cite}  % comment out for biblatex with backend=biber 
 % ---------------------------
-%\biberVersion
+\biberVersion
 \BibtexOrBiblatex
-%\usepackage[backend=biber,bibstyle=EG,citestyle=alphabetic,backref=true]{biblatex} 
-%\addbibresource{egbibsample.bib}
+\usepackage[backend=biber,bibstyle=EG,citestyle=alphabetic,backref=true]{biblatex} 
+\addbibresource{egbibsample.bib}
 % ---------------------------  
 \electronicVersion
 \PrintedOrElectronic
+
 % for including postscript figures
 % mind: package option 'draft' will replace PS figure by a filename within a frame
 \ifpdf \usepackage[pdftex]{graphicx} \pdfcompresslevel=9
@@ -73,4 +71,4 @@
 \usepackage{egweblnk} 
 % end of prologue
 
-\input{EGauthorGuidelines-body-sub.inc}
+\input{EGauthorGuidelines-body_with_teaser_original.inc}

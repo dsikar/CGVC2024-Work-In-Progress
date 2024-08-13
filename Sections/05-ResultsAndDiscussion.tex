@@ -57,7 +57,9 @@ After running the K-Means clustering algorithm, initialised with the  average so
 % print_latex_table(diff_matrix)
 
 Table \ref{tab:diff_softmax_avg_dist_to_centroids} presents the Euclidean distances between the average softmax outputs and the K-Means centroids for each digit class (0-9). For most digit classes (0, 1, 2, 3, 4, 7, 9), the Euclidean distances are extremely small, on the order of 1e-14 to 1e-15, indicating that the average softmax outputs are very close to the centroids obtained from the K-Means clustering algorithm. However, for digit classes 5, 6, and 8, the Euclidean distances are slightly larger, on the order of 1e-4, suggesting a minor difference between the average softmax outputs and the K-Means centroids for these specific classes, which could be attributed to the presence of some misclassified or ambiguous examples within these classes.
-Despite the slight deviations observed for classes 5, 6, and 8, the overall distances between the average softmax outputs and the K-Means centroids are relatively small across all digit classes, indicating a strong similarity between the representations learned by the neural network and the centroids obtained from the K-Means clustering algorithm. The small distances suggest that using the average softmax outputs as initial centroids for the K-Means clustering algorithm is an effective approach, as they provide a good starting point for the clustering process and can potentially lead to faster convergence.
+Despite the slight deviations observed for classes 5, 6, and 8, the overall distances between the average softmax outputs and the K-Means centroids are relatively small across all digit classes, indicating a strong similarity between the representations learned by the neural network and the centroids obtained from the K-Means clustering algorithm. The small distances suggest that using the average softmax outputs as initial centroids for the K-Means clustering algorithm is an effective approach, as they provide a good starting point for the clustering process and can potentially lead to faster convergence. Given the data is highly skewed towards the centroids, alternative statistical methods like standard percentiles lack granularity.
+% the above in reply to:
+% I am kind of concerned about using the minimal distance in equation 3 and 5 as a metric since it’s not statistically robust. Maybe a more statistically robust measure, like percentile, would be better?
 
 % The table titled "Euclidean Distances between Class Average Softmax and Centroids" presents the Euclidean distances between the average softmax outputs and the K-Means centroids for each digit class (0-9). These distances provide insights into the similarity between the average softmax outputs and the centroids obtained from the K-Means clustering algorithm.
 
@@ -93,9 +95,11 @@ Despite the slight deviations observed for classes 5, 6, and 8, the overall dist
     \label{fig:8688_22561_Softmax_Output}
 \end{figure}
 
-Looking at the pattern of the softmax output (network prediction) gives a good indication of how confident a model is of the class prediction. Figure \ref{fig:8688_22561_Softmax_Output} contains two bar charts that show the MNIST-trained CNN softmax output for MNIST dataset digit ids 8688 and 22561 (starting from index 0), where both are labelled as class 6 and correctly classified by the CNN as such. The bar chart on the left shows the softmax output assigns a very high probability to both classes 5 and 6 (where 6 is the highest). The bar chart on the right shows that the CNN assigns a high probability to classes 6 and 8 (where 6 is again the highest). The cluster labels however do not correspond as digit id 8688 is nearer to the cluster 5 centroid, and digit id 22561 is nearer to cluster 8 centroid. This volatility may be explained by the relatively high deltas shown in Table \ref{tab:diff_softmax_avg_dist_to_centroids}, where the K-Means centroids moved a relatively large distance with respect to the initial values (given by average softmax outputs for correct digit classifications in the training dataset), for digit classes 5, 6 and 8. 
+Looking at the pattern of the softmax output (network prediction) %gives a good indication of 
+indicates how confident a model is of the class prediction. Figure \ref{fig:8688_22561_Softmax_Output} contains two bar charts that show the MNIST-trained CNN softmax output for MNIST dataset digit ids 8688 and 22561 (starting from index 0), where both are labelled as class 6 and correctly classified by the CNN as such. The bar chart on the left shows the softmax output assigns a very high probability to both classes 5 and 6 (where 6 is the highest). The bar chart on the right shows that the CNN assigns a high probability to classes 6 and 8 (where 6 is again the highest). The cluster labels however do not correspond as digit id 8688 is nearer to the cluster 5 centroid, and digit id 22561 is nearer to cluster 8 centroid. This volatility may be explained by the relatively high deltas shown in Table \ref{tab:diff_softmax_avg_dist_to_centroids}, where the K-Means centroids moved a relatively large distance with respect to the initial values (given by average softmax outputs for correct digit classifications in the training dataset), for digit classes 5, 6 and 8. 
 
-Conversely, the pattern of the distance to class centroids for a given softmax output is a good indication of how close the softmax output is to a class centroid with respect to other class centroids. Figure \ref{fig:distances_to_centroids_8688_22561} shows on the left the distance to all class centroids of digit id 8688 network softmax output, placing it closing to centroids 5 and 6, while the image on the right (digit id 22561) places the softmax output closer to centroids 6 and 9. We notice the inverse relation between both sets of figures, where the highest bars (network confidence) in the first set correspond to the lowest bars (distance to class centroid) set in the second set.
+Conversely, the pattern of the distance to class centroids for a given softmax output %is a good indication of 
+indicates how close the softmax output is to a class centroid with respect to other class centroids. Figure \ref{fig:distances_to_centroids_8688_22561} shows on the left the distance to all class centroids of digit id 8688 network softmax output, placing it closing to centroids 5 and 6, while the image on the right (digit id 22561) places the softmax output closer to centroids 6 and 9. We notice the inverse relation between both sets of figures, where the highest bars (network confidence) in the first set correspond to the lowest bars (distance to class centroid) set in the second set.
 
 
 
@@ -148,7 +152,7 @@ Conversely, the pattern of the distance to class centroids for a given softmax o
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Applying Perturbations}
-Through trial and error, we find sets of parameters values
+Through trial and error, we find sets of parameter values
 for each perturbation function, such that as the level increases from 1 to
 10, the network predictive accuracy decreases from 98.52\%
 maximum to 36.32\% minimum and from average 97.61\%
@@ -182,7 +186,9 @@ Figure \ref{fig:Pixelation_Digit_5_images_histogramsx10_plus_softmax} shows digi
 
 
 
-Figure \ref{fig:PerturbedMNISTAccuracyHeatmap} shows a heatmap that visualizes the accuracy trained on the original MNIST training dataset and tested with our perturbed dataset described in section \ref{methods:PerturbedMNISTDataset}.
+% Figure \ref{fig:PerturbedMNISTAccuracyHeatmap} shows a heatmap that visualizes the accuracy trained on the original MNIST training dataset and tested with our perturbed dataset described in section \ref{methods:PerturbedMNISTDataset}.
+
+Figure \ref{fig:PerturbedMNISTAccuracyHeatmap} shows a heatmap where every cell represents one perturbation (y axis labels, 12 in total) at one intensity level (x axis labels, 10 in total) applied to the 10,000 image MNIST training dataset, the perturbed images are presented to the trained model and the resulting accuracy is placed in the corresponding cell. The heatmap therefore represents an experiment with 1,210,000 predictions on perturbed images of the perturbed dataset as described in section \ref{methods:PerturbedMNISTDataset}.
 
 The heatmap uses a color scale from red to blue, with red indicating higher accuracy values and blue representing lower accuracy. As the perturbation intensity increases, the accuracy decreases for all perturbation types.
 
@@ -198,10 +204,13 @@ The model appears to be most resilient to perturbations like brightness, contras
 
 \subsection{Misclassification Likelihood Matrix}
 
-Figure \ref{fig:DigitClassMisclassificationLikelihoodMatrix} shows the Misclassification Likelihood Matrix obtained by the method described in section \ref{miss_class_matrix}. Comparing the figure with the MNIST testing (non-perturbed) dataset shown in Figure \ref{fig:mnist_testing_dataset_confusion_matrix} we can notice some information added by the MLM that may help inform risk assessment. On the top right of the confusion matrix we seea cluster of zeros, representing digits 0, 1 and 2 misclassifications of 8 and 9. The MLM is able to provide fine-grained information about the misclassification likelihood, assigning relatively low albeit non-zero likelihood misclassification values.
-As the MLM represents a much larger dataset, there are some noticeable discrepancies. The MLM does not assign a high likelihood for digit 9 misclassified as 7, which is the highest in the testing dataset. On the other hand, row 7 is a close match. with 7 being misclassified as 2 holds in the perturbed MNIST dataset.
+Figure \ref{fig:DigitClassMisclassificationLikelihoodMatrix} shows the Misclassification Likelihood Matrix obtained by the method described in section \ref{miss_class_matrix}. Comparing the figure with the MNIST testing (non-perturbed) dataset shown in Figure \ref{fig:mnist_testing_dataset_confusion_matrix} we can notice some information added by the MLM that may help inform risk assessment. On the top right of the confusion matrix is a cluster of zeros, representing digits 0, 1 and 2 misclassifications of 8 and 9. The MLM is able to provide fine-grained information about the misclassification likelihood, assigning relatively low albeit non-zero likelihood misclassification values.
+As the MLM represents a much larger dataset, there are some noticeable discrepancies. The MLM does not assign a high likelihood for digit 9 misclassified as 7, which is the highest in the testing dataset. On the other hand, row 7 is a close match with 7 being misclassified as 2 holding in the perturbed MNIST dataset.
 
+MLM and traditional confusion matrices offer complementary insights into a neural network's classification performance. The MLM, derived from multiple perturbed versions of the testing set, provides a fine-grained view of misclassification tendencies. It represents the likelihood of each digit class being misclassified as another, with color intensity indicating misclassification probability. In contrast, the confusion matrix shows actual counts of correct and incorrect classifications for a single test set.
+The MLM offers an additional perspective, showing likelihood values even for rare misclassifications.
 
+While the confusion matrix clearly shows classification performance with higher numbers on the diagonal indicating better accuracy, the MLM requires a different interpretation. Zero values on the diagonal mean one class cannot be misclassified as itself. Both tools highlight patterns like the high likelihood of misclassifying 7 as 2, while the MLM also shows likelihood for corresponding zero values in the confusion matrix e.g. the likelihood of class zero being misclassified as classes 1, 2, 3, 4 or 5.
 
 % Code:
 % # Generate Distance Matrix

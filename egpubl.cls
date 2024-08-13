@@ -1118,17 +1118,25 @@ submitted to \textit{#1}%
 \usepackage{lastpage}
 
 \def\EGlocalpagenumber{\def\p@EGlocalpagenumber{\thepage\  of \pageref*{LastPage}}
-\def\@oddhead{\small \hfill \itshape \@shortauthor\ / \@shorttitle
+% \def\@oddhead{\small \hfill \itshape \@shortauthor\ / \@shorttitle
+%                \hfill \upshape \textrm{\p@EGlocalpagenumber}}
+% \def\@evenhead{\small \upshape \textrm{\p@EGlocalpagenumber} \hfill
+%                 \itshape \@shortauthor\ / \@shorttitle \hfill}
+% }
+\def\@oddhead{\small \hfill \itshape \@shortauthor\  \@shorttitle
                \hfill \upshape \textrm{\p@EGlocalpagenumber}}
 \def\@evenhead{\small \upshape \textrm{\p@EGlocalpagenumber} \hfill
-                \itshape \@shortauthor\ / \@shorttitle \hfill}
+                \itshape \@shortauthor\ \@shorttitle \hfill}
 }
 
 \def\Wileypagenumber{\def\p@Wileypagenumber{\thepage\  of \pageref*{LastPage}}
-\def\@oddhead{\small \hfill \itshape \@shortauthor\ / \@shorttitle
+\def\@oddhead{\small \hfill \itshape \@shortauthor\  \@shorttitle
                \hfill \upshape \textrm{\p@Wileypagenumber}}
+% \def\@evenhead{\small \upshape \textrm{\p@Wileypagenumber} \hfill
+%                 \itshape \@shortauthor\ / \@shorttitle \hfill}
+% }
 \def\@evenhead{\small \upshape \textrm{\p@Wileypagenumber} \hfill
-                \itshape \@shortauthor\ / \@shorttitle \hfill}
+                \itshape \@shortauthor\ \@shorttitle \hfill}
 }
 %\EGpagenumber%
 %

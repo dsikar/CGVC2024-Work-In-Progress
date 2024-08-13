@@ -53,12 +53,19 @@
 \usepackage[T1]{fontenc}
 \usepackage{dfadobe}  
 
+% additional packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{lipsum}
+\usepackage{float}
+
 %\usepackage{cite}  % comment out for biblatex with backend=biber 
 % ---------------------------
 \biberVersion
 \BibtexOrBiblatex
 \usepackage[backend=biber,bibstyle=EG,citestyle=alphabetic,backref=true]{biblatex} 
-\addbibresource{egbibsample.bib}
+% \addbibresource{egbibsample.bib}
+\addbibresource{references.bib}
 % ---------------------------  
 \electronicVersion
 \PrintedOrElectronic
@@ -71,4 +78,4 @@
 \usepackage{egweblnk} 
 % end of prologue
 
-\input{EGauthorGuidelines-body_with_teaser.inc}
+\input{0.5-EGauthorGuidelines-body_with_teaser_camera_ready.inc}
